@@ -51,12 +51,39 @@ public class StudentApp {
                 "Information Technology"
         );
 
+        Student student1 = new Student(
+                2,
+                "Priya",
+                "priya@gmail.com",
+                "Computer Science"
+        );
+
+        Student student2 = new Student(
+                3,
+                "Arun",
+                "arun@gmail.com",
+                "Electronics"
+        );
+
+        Student student3 = new Student(
+                4,
+                "Kavi",
+                "kavi@gmail.com",
+                "Information Technology"
+        );
+
+        
+        	
+
         // INSERT
         Session session = factory.openSession();
 
         session.beginTransaction();
-
         session.persist(student);
+        session.persist(student1);
+    	session.persist(student2);
+    	session.persist(student3);
+       
 
         session.getTransaction().commit();
 
